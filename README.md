@@ -2,22 +2,31 @@
 
 Development of an API using SpringBoot + Kotlin with the aim of registering Avengers.
 
+![Kotlin](https://img.shields.io/badge/kotlin-%237F52FF.svg?style=for-the-badge&logo=kotlin&logoColor=white)
+![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
+![Spring](https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white)
+![Apache Maven](https://img.shields.io/badge/Apache%20Maven-C71A36?style=for-the-badge&logo=Apache%20Maven&logoColor=white)
+![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)
+![Heroku](https://img.shields.io/badge/heroku-%23430098.svg?style=for-the-badge&logo=heroku&logoColor=white)
+![IntelliJ IDEA](https://img.shields.io/badge/IntelliJIDEA-000000.svg?style=for-the-badge&logo=intellij-idea&logoColor=white)
+
 ## Technologies / Frameworks / IDE
 
-- Intellij
-- SpringBoot 2.4.4
+- Intellij 2023.3.7
+- SpringBoot 3.3.3
 - Maven
 - Kotlin
 - SpringData JPA
 - PostgreSQL
 - Flyway
-- Java 8
+- Java 17
 - Heroku
 
 ## Criação do esqueleto do projeto
 
 - https://start.spring.io/
-  [Spring IO](https://start.spring.io/#!type=maven-project&language=kotlin&platformVersion=3.3.3&packaging=jar&jvmVersion=17&groupId=io.github.jonasfschuh&artifactId=kotlin-avengers-api&name=kotlin-avengers-api&description=Avengers%20API%20Development%20with%20Kotlin&packageName=io.github.jonasfschuh.kotlin-avengers-api&dependencies=web,data-jpa,lombok,cloud-resilience4j,postgresql,flyway,devtools,validation)
+- 
+  [spring initializr](https://start.spring.io/#!type=maven-project&language=kotlin&platformVersion=3.3.3&packaging=jar&jvmVersion=17&groupId=io.github.jonasfschuh&artifactId=kotlin-avengers-api&name=kotlin-avengers-api&description=Avengers%20API%20Development%20with%20Kotlin&packageName=io.github.jonasfschuh.kotlin-avengers-api&dependencies=web,data-jpa,lombok,cloud-resilience4j,postgresql,flyway,devtools,validation)
 
 
 ## Define API Contract
@@ -53,7 +62,7 @@ Development of an API using SpringBoot + Kotlin with the aim of registering Aven
 create table avenger (
     id bigserial not null,
     nick varchar(36),
-    person varchar(128),
+    person archar(128),
     description varchar(128),
     history text
     primary key (id)
