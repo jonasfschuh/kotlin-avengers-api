@@ -1,4 +1,4 @@
-package io.github.jonasfschuh.kotlin_avengers_api.application.web.response
+package io.github.jonasfschuh.kotlin_avengers_api.application.web.resource.response
 
 data class AvengerResponse(
     val nick: String,
