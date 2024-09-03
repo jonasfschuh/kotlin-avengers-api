@@ -1,0 +1,2 @@
+[Spring IO](https://start.spring.io/#!type=maven-project&language=kotlin&platformVersion=3.3.3&packaging=jar&jvmVersion=17&groupId=io.github.jonasfschuh&artifactId=kotlin-avengers-api&name=kotlin-avengers-api&description=Avengers%20API%20Development%20with%20Kotlin&packageName=io.github.jonasfschuh.kotlin-avengers-api&dependencies=web,data-jpa,lombok,cloud-resilience4j,postgresql,flyway,devtools,validation)
+
