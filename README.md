@@ -18,7 +18,7 @@ Development of an API using SpringBoot + Kotlin with the aim of registering Aven
 - Kotlin
 - SpringData JPA
 - PostgreSQL
-- Flyway
+- Flyway 
 - Java 17
 - Heroku
 
