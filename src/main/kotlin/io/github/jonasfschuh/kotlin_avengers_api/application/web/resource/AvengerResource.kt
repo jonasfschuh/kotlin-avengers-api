@@ -7,6 +7,7 @@ import io.github.jonasfschuh.kotlin_avengers_api.domain.avenger.AvengerRepositor
 import jakarta.validation.Valid
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.http.ResponseEntity
+import org.springframework.web.bind.annotation.DeleteMapping
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PathVariable
 import org.springframework.web.bind.annotation.PostMapping
@@ -31,7 +32,7 @@ class AvengerResource(
             ResponseEntity.ok().body(it)
         }
 
-    @GetMapping(value =  "{id}")
+    @GetMapping("{id}")
     fun getAvengersDetails(@PathVariable( value = "id") id: Long) =
         repository.getDetail(id)?.let {
             ResponseEntity.ok().body(AvengerResponse.from(it))
@@ -47,7 +48,7 @@ class AvengerResource(
                 .body(AvengerResponse.from(it))
         }
 
-    @PutMapping(value = "{id}")
+    @PutMapping("{id}")
     fun updateAvanger(@Valid @RequestBody request: AvengerRequest, @PathVariable( value = "id") id: Long) =
         repository.getDetail(id)?.let {
             AvengerRequest.to(it.id, request).apply {
@@ -56,4 +57,10 @@ class AvengerResource(
                 ResponseEntity.accepted().body(AvengerResponse.from(avenger))
             }
         } ?: ResponseEntity.notFound().build<Void>()
+
+    @DeleteMapping("{id}")
+    fun deleteAvenger(@PathVariable(value = "id") id: Long) =
+        repository.delete(id).let {
+            ResponseEntity.accepted().build<Void>()
+        }
 }
