@@ -1,4 +1,4 @@
-package io.github.jonasfschuh.kotlin_avengers_api.application.web.request
+package io.github.jonasfschuh.kotlin_avengers_api.application.web.resource.request
 
 import jakarta.validation.constraints.NotBlank
 import jakarta.validation.constraints.NotEmpty
