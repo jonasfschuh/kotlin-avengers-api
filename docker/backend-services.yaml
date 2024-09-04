@@ -22,7 +22,7 @@ services:
     ports:
       - "5556:80"
     depends_on:
-      - postgres
+      - postgres-avengers
     networks:
       - postgres-compose-network
 
