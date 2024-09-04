@@ -1,0 +1,1 @@
+docker-compose -f backend-services.yaml up -d
