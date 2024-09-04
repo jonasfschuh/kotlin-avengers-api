@@ -1,6 +1,6 @@
 version: '3.2'
 services:
-  postgres:
+  postgres-avengers:
     image: postgres:12-alpine
     environment:
       POSTGRES_USER: ${DB_USER}
