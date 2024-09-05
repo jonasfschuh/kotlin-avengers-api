@@ -62,9 +62,9 @@ Development of an API using SpringBoot + Kotlin with the aim of registering Aven
 create table avenger (
     id bigserial not null,
     nick varchar(36),
-    person archar(128),
+    person varchar(128),
     description varchar(128),
-    history text
+    history text,
     primary key (id)
 );
 
@@ -80,7 +80,7 @@ alter table avenger add constraint UK_5r88eemotwgru6k0ilqb2ledh unique (nick);
 ```yaml
 spring:
   application:
-    name: avengers
+    name: kotlin-avengers-api
   config:
     # This configuration allow use profiles as spring 2.3.x version
     # In spring 2.4.x version, has changed to:
@@ -110,7 +110,7 @@ spring:
     hibernate:
       ddl-auto: none
       naming:
-        physical-strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
+        physical_naming_strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
         implicit-strategy: org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy
   main:
     allow-bean-definition-overriding: true
@@ -140,8 +140,8 @@ server:
 
 ```yaml
 spring:
-  profiles:
-    active: dev
+  #  profiles:
+  #    active: dev
   jackson:
     serialization:
       indent-output: true
