@@ -226,7 +226,7 @@ networks:
 
 - Start API
 ```sh
-./mvnw spring-boot:run -Dspring-boot.run.profiles=dev -Dspring-boot.run.jvmArguments="-Xmx256m -Xms128m" -Dspring-boot.run.arguments="'--DB_USER=dio.avenger' '--DB_PASSWORD=dio.avenger' '--DB_NAME=avengers'"
+./mvnw spring-boot:run -Dspring-boot.run.profiles=dev -Dspring-boot.run.jvmArguments="-Xmx256m -Xms128m" -Dspring-boot.run.arguments="'--DB_USER=avenger' '--DB_PASSWORD=avenger' '--DB_NAME=avengers'"
 ``` 
 
 ## Heroku
@@ -241,3 +241,5 @@ networks:
 web: java -XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap $JAVA_OPTS -Dserver.port=$PORT -Dspring.profiles.active=heroku -jar target/*.jar
 ```
       
+### API URL
+http://localhost:9090/avengers/v1/api/avenger
