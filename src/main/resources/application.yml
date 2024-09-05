@@ -10,7 +10,7 @@ spring:
     #      <group>: dev, auth
     use-legacy-processing: true
   profiles:
-    active: dev
+    active: local
   jmx:
     enabled: false
   data:
