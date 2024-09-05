@@ -233,7 +233,7 @@ networks:
 
 - Criar app
 - Linkar com Github
-- Setar vairáveis de ambiente
+- Setar variáveis de ambiente
 
 ### Procfile
 
